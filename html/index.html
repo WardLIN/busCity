@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1, user-scalable=no">
+	<title>批发商城</title>
+	<!-- IE6,7,8 -->
+	<!--[if lt IE 9]>
+　　　　<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+　　<![endif]-->
+    <link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="../css/index.css">
+	<link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">  
+	<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+    
+	<div class="header">
+		<h1>基哥批发商城</h1>
+	</div>
+	<div class="nav">
+		<!-- <h2 class="bus-list-title">商品列表</h2> -->
+		<!-- <div class="breadcrumb_totolGoods">
+			<ol class="breadcrumb">
+				<li><a href="#">全部</a></li>
+				<li><a href="#">百事可乐</a></li>
+				<li><a href="#">饮料</a></li>
+			</ol>
+			<p class="totalGoodsDis">共<span id="totolGoods">9999</span>件商品</p>
+		</div> -->
+		<form action="">
+		<div class="bus-list-box">
+			<!-- 已选条件 -->
+			<div class="select-result">
+				<dl id="dl_result">
+                    <dt>已选条件：</dt>
+                    <dd class="select-no">暂时没有选择过滤条件</dd>
+                    <button class="btn btn-info btn-xs btn-search" id="btnSearch"><span class="glyphicon glyphicon-search"></span></button>
+                </dl>
+			</div>
+		     <!-- 品牌 -->
+		    <div class="cond-brands cond select-list">
+		        <div class="attrKey">品牌</div>
+				<div class="attrValues attrValues-brands">
+					<ul class="clearfix ul" id="select1">
+						<li><a href="">可口可乐</a></li>
+						<li><a href="">可口</a></li>
+						<li><a href="">可口可乐</a></li>
+						<li><a href="">可口可</a></li>
+						<li><a href="">可口可乐</a></li>
+						<li><a href="">可口可乐1111</a></li>
+						<li><a href="">可口可乐</a></li>
+						<li><a href="">可口可乐</a></li>
+						<li><a href="">可口可乐</a></li>
+						<li><a href="">可口可乐</a></li>
+						<li><a href="">可口可32乐</a></li>
+						<li><a href="">可口可乐</a></li>
+						<li><a href="">可口eq可乐</a></li>
+						<li><a href="">可口weq可乐</a></li>
+						<li><a href="">可口可d乐</a></li>
+						<li><a href="">可口可乐</a></li>
+						<li><a href="">可口可乐</a></li>
+						<li><a href="">可口可乐</a></li>
+						<li><a href="">可口da可乐</a></li>
+						<li><a href="">可口ad可乐</a></li>
+						<li><a href="">可口df可乐</a></li>
+						<li><a href="">可口dad可乐</a></li>
+						<li><a href="">可口可乐</a></li>
+						<li><a href="">可口可乐</a></li>
+						<li><a href="">可口可乐</a></li>
+						<li><a href="">可口可乐</a></li>
+						<li><a href="">可口可乐</a></li>
+						<li><a href="">可口可乐</a></li>
+						<li><a href="">可口可乐</a></li>
+						<li><a href="">可口可乐</a></li>
+						<li><a href="">可口可乐</a></li>
+						<li><a href="">可口可乐</a></li>
+						<li><a href="">可口可乐</a></li>
+						<li><a href="">可口可乐</a></li>
+						<li><a href="">可口可乐</a></li>
+						<li><a href="">可口可乐</a></li>
+					</ul>
+				</div>
+				<div class="av-options">
+					<a>更多<i class="glyphicon glyphicon-chevron-down"></i></a>
+				</div>
+			</div>
+			<!-- 种类 -->
+			<div class="cond-species cond select-list">
+				<div class="attrKey">种类</div>
+				<div class="attrValues ">
+					 <ul class="clearfix ul" id="select2">
+					 	<li><a href=""><b>泡面</b></a></li>
+					 	<li><a href=""><b>饮料</b></a></li>
+					 	<li><a href=""><b>纸巾</b></a></li>
+					 </ul>
+				</div>
+				<div class="av-options">
+					<a>更多<i class="glyphicon glyphicon-chevron-down"></i></a>
+				</div>
+			</div>
+			<!-- 包装分式 -->
+			<div class="cond-packingWay cond select-list">
+				<div class="attrKey">包装方式</div>
+				<div class="attrValues">
+					 <ul class="clearfix ul" id="select3">
+					 	<li><a href=""><b>箱装</b></a></li>
+					 	<li><a href=""><b>散装</b></a></li>
+					 </ul>
+				</div>
+				<div class="av-options">
+					<a>更多<i class="glyphicon glyphicon-chevron-down"></i></a>
+				</div>
+			</div>
+			
+		</div>
+		</form>
+	</div>
+	<div class="main container-fluid">
+	   <!-- 购物清单 -->
+	   <div class="cart col-lg-3">
+		   	<h2><i class="glyphicon glyphicon-shopping-cart"></i>购物车</h2>
+		   	<ul>
+		   		<li>
+		   		    <div class="eachItemTotalPrice">
+		   		    	小计：¥
+		   		    	<span id="eachItemTotalPrice">1999.00</span>
+		   		    </div>
+		   		    <div class="itemList">
+				   		<div class="itemName">
+				   			<b>可口可乐300ml瓶装饮料可口可乐</b>
+				   		</div>
+				   		<div class="number">
+				   			<button  class="glyphicon glyphicon-plus-sign"></button>
+						   <span id="buyNum">5</span>
+						    <button  class="glyphicon glyphicon-minus-sign"></button>
+				   		</div>
+				   		<div class="price">
+				   		    <div><span class="glyphicon glyphicon-trash"></span></div>
+				   			<div>¥<strong>1999.00</strong></div>
+				   		</div>
+			   		</div>
+		   		</li>
+		   		<li>
+		   		    <div class="eachItemTotalPrice">
+		   		    	小计：¥
+		   		    	<span id="eachItemTotalPrice">1999.00</span>
+		   		    </div>
+		   		    <div class="itemList">
+				   		<div class="itemName">
+				   			<a href="">可口可乐300ml瓶装饮料可口可乐</a>
+				   		</div>
+				   		<div class="number">
+				   			<button  class="glyphicon glyphicon-plus-sign"></button>
+						   <span id="buyNum">1</span>
+						    <button  class="glyphicon glyphicon-minus-sign"></button>
+				   		</div>
+				   		<div class="price">
+				   		    <div><span class="glyphicon glyphicon-trash"></span></div>
+				   			<div>¥<strong>1999.00</strong></div>
+				   		</div>
+			   		</div>
+		   		</li>
+		   		<li>
+		   		    <div class="eachItemTotalPrice">
+		   		    	小计：¥
+		   		    	<span id="eachItemTotalPrice">1999.00</span>
+		   		    </div>
+		   		    <div class="itemList">
+				   		<div class="itemName">
+				   			<a href="">可口可乐300ml瓶装饮料可口可乐</a>
+				   		</div>
+				   		<div class="number">
+				   			<button  class="glyphicon glyphicon-plus-sign"></button>
+						   <span id="buyNum">1</span>
+						    <button  class="glyphicon glyphicon-minus-sign"></button>
+				   		</div>
+				   		<div class="price">
+				   		    <div><span class="glyphicon glyphicon-trash"></span></div>
+				   			<div>¥<strong>1999.00</strong></div>
+				   		</div>
+			   		</div>
+		   		</li>
+		   		<li>
+		   		    <div class="eachItemTotalPrice">
+		   		    	小计：¥
+		   		    	<span id="eachItemTotalPrice">1999.00</span>
+		   		    </div>
+		   		    <div class="itemList">
+				   		<div class="itemName">
+				   			<a href="">可口可乐300ml瓶装饮料可口可乐</a>
+				   		</div>
+				   		<div class="number">
+				   			<button  class="glyphicon glyphicon-plus-sign"></button>
+						   <span id="buyNum">1</span>
+						    <button  class="glyphicon glyphicon-minus-sign"></button>
+				   		</div>
+				   		<div class="price">
+				   		    <div><span class="glyphicon glyphicon-trash"></span></div>
+				   			<div>¥<strong>1999.00</strong></div>
+				   		</div>
+			   		</div>
+		   		</li>
+		   		<li>
+		   		    <div class="eachItemTotalPrice">
+		   		    	小计：¥
+		   		    	<span id="eachItemTotalPrice">1999.00</span>
+		   		    </div>
+		   		    <div class="itemList">
+				   		<div class="itemName">
+				   			<a href="">可口可乐300ml瓶装饮料可口可乐</a>
+				   		</div>
+				   		<div class="number">
+				   			<button  class="glyphicon glyphicon-plus-sign"></button>
+						   <span id="buyNum">1</span>
+						    <button  class="glyphicon glyphicon-minus-sign"></button>
+				   		</div>
+				   		<div class="price">
+				   		    <div><span class="glyphicon glyphicon-trash"></span></div>
+				   			<div>¥<strong>1999.00</strong></div>
+				   		</div>
+			   		</div>
+		   		</li>
+		   		<li>
+		   		    <div class="eachItemTotalPrice">
+		   		    	小计：¥
+		   		    	<span id="eachItemTotalPrice">1999.00</span>
+		   		    </div>
+		   		    <div class="itemList">
+				   		<div class="itemName">
+				   			<a href="">可口可乐300ml瓶装饮料可口可乐</a>
+				   		</div>
+				   		<div class="number">
+				   			<button  class="glyphicon glyphicon-plus-sign"></button>
+						   <span id="buyNum">1</span>
+						    <button  class="glyphicon glyphicon-minus-sign"></button>
+				   		</div>
+				   		<div class="price">
+				   		    <div><span class="glyphicon glyphicon-trash"></span></div>
+				   			<div>¥<strong>1999.00</strong></div>
+				   		</div>
+			   		</div>
+		   		</li>
+		   		<li>
+		   		    <div class="eachItemTotalPrice">
+		   		    	小计：¥
+		   		    	<span id="eachItemTotalPrice">1999.00</span>
+		   		    </div>
+		   		    <div class="itemList">
+				   		<div class="itemName">
+				   			<a href="">可口可乐300ml瓶装饮料可口可乐</a>
+				   		</div>
+				   		<div class="number">
+				   			<button  class="glyphicon glyphicon-plus-sign"></button>
+						   <span id="buyNum">1</span>
+						    <button  class="glyphicon glyphicon-minus-sign"></button>
+				   		</div>
+				   		<div class="price">
+				   		    <div><span class="glyphicon glyphicon-trash"></span></div>
+				   			<div>¥<strong>1999.00</strong></div>
+				   		</div>
+			   		</div>
+		   		</li>
+		   		<li>
+		   		    <div class="eachItemTotalPrice">
+		   		    	小计：¥
+		   		    	<span id="eachItemTotalPrice">1999.00</span>
+		   		    </div>
+		   		    <div class="itemList">
+				   		<div class="itemName">
+				   			<a href="">可口可乐300ml瓶装饮料可口可乐</a>
+				   		</div>
+				   		<div class="number">
+				   			<button  class="glyphicon glyphicon-plus-sign"></button>
+						   <span id="buyNum">1</span>
+						    <button  class="glyphicon glyphicon-minus-sign"></button>
+				   		</div>
+				   		<div class="price">
+				   		    <div><span class="glyphicon glyphicon-trash"></span></div>
+				   			<div>¥<strong>1999.00</strong></div>
+				   		</div>
+			   		</div>
+		   		</li>
+		   
+		   	</ul>
+		   	<div class="settlement-wrap">
+			   	<div class="settlement-info">
+			   		<span class="totalNum">
+			   		    已选
+			   			<strong id="totalNum">15</strong>
+			   			件
+			   		</span>
+			   		<span class="totalPrice">
+			   			¥
+			   			<span id="totalPrice">199.00</span>
+			   		</span>
+			   	</div>
+			   	<div class="settlement-btn">
+			   		结算&nbsp;
+			   		<span class="glyphicon glyphicon-credit-card"></span>
+			   	</div>
+
+		   	</div>
+	   </div>
+	   <div class="item-dis col-lg-9">
+		   <div class="item-list">
+		        <!-- 商品表 -->
+		        <div class="bus-dis">  
+		           <!-- 图片和描述 -->
+				   <div class="bus-dis-des">
+				   		<img src="../pic/coco-cola.jpg" alt="">
+				   		<span>
+				   			¥<span id="price">199.00</span>(<span id="unit">箱</span>)
+				   		</span><br>
+				   		<span id="goodsDes">可口可乐300ml瓶装饮料</span>
+				   </div>
+				   <!-- 订货数量 -->
+				   <div class="buyNum">
+					      <button  class="btn btn-success btn-xs glyphicon glyphicon-plus-sign"></button>
+					      <input   class="number" type="number" maxlength="8" id="buyNum" title="请输入购买数量">
+					      <button  class="btn btn-success btn-xs glyphicon glyphicon-minus-sign"></button>
+				   </div>
+				</div>	
+				<div class="bus-dis">  
+		           <!-- 图片和描述 -->
+				   <div class="bus-dis-des">
+				   		<img src="../pic/coco-cola.jpg" alt="">
+				   		<span>
+				   			¥<span id="price">199.00</span>(<span id="unit">箱</span>)
+				   		</span><br>
+				   		<span id="goodsDes">可口可乐300ml瓶装饮料</span>
+				   </div>
+				   <!-- 订货数量 -->
+				   <div class="buyNum">
+					      <button  class="btn btn-success btn-xs glyphicon glyphicon-plus-sign"></button>
+					      <input   class="number" type="number" maxlength="8" id="buyNum" title="请输入购买数量">
+					      <button  class="btn btn-success btn-xs glyphicon glyphicon-minus-sign"></button>
+				   </div>
+				</div>	
+				<div class="bus-dis">  
+		           <!-- 图片和描述 -->
+				   <div class="bus-dis-des">
+				   		<img src="../pic/coco-cola.jpg" alt="">
+				   		<span>
+				   			¥<span id="price">199.00</span>(<span id="unit">箱</span>)
+				   		</span><br>
+				   		<span id="goodsDes">可口可乐300ml瓶装饮料</span>
+				   </div>
+				   <!-- 订货数量 -->
+				   <div class="buyNum">
+					      <button  class="btn btn-success btn-xs glyphicon glyphicon-plus-sign"></button>
+					      <input   class="number" type="number" maxlength="8" id="buyNum" title="请输入购买数量">
+					      <button  class="btn btn-success btn-xs glyphicon glyphicon-minus-sign"></button>
+				   </div>
+				</div>	
+				<div class="bus-dis">  
+		           <!-- 图片和描述 -->
+				   <div class="bus-dis-des">
+				   		<img src="../pic/coco-cola.jpg" alt="">
+				   		<span>
+				   			¥<span id="price">199.00</span>(<span id="unit">箱</span>)
+				   		</span><br>
+				   		<span id="goodsDes">可口可乐300ml瓶装饮料</span>
+				   </div>
+				   <!-- 订货数量 -->
+				   <div class="buyNum">
+					      <button  class="btn btn-success btn-xs glyphicon glyphicon-plus-sign"></button>
+					      <input   class="number" type="number" maxlength="8" id="buyNum" title="请输入购买数量">
+					      <button  class="btn btn-success btn-xs glyphicon glyphicon-minus-sign"></button>
+				   </div>
+				</div>	
+				<div class="bus-dis">  
+		           <!-- 图片和描述 -->
+				   <div class="bus-dis-des">
+				   		<img src="../pic/coco-cola.jpg" alt="">
+				   		<span>
+				   			¥<span id="price">199.00</span>(<span id="unit">箱</span>)
+				   		</span><br>
+				   		<span id="goodsDes">可口可乐300ml瓶装饮料</span>
+				   </div>
+				   <!-- 订货数量 -->
+				   <div class="buyNum">
+					      <button  class="btn btn-success btn-xs glyphicon glyphicon-plus-sign"></button>
+					      <input   class="number" type="number" maxlength="8" id="buyNum" title="请输入购买数量">
+					      <button  class="btn btn-success btn-xs glyphicon glyphicon-minus-sign"></button>
+				   </div>
+				</div>	
+				<div class="bus-dis">  
+		           <!-- 图片和描述 -->
+				   <div class="bus-dis-des">
+				   		<img src="../pic/coco-cola.jpg" alt="">
+				   		<span>
+				   			¥<span id="price">199.00</span>(<span id="unit">箱</span>)
+				   		</span><br>
+				   		<span id="goodsDes">可口可乐300ml瓶装饮料</span>
+				   </div>
+				   <!-- 订货数量 -->
+				   <div class="buyNum">
+					      <button  class="btn btn-success btn-xs glyphicon glyphicon-plus-sign"></button>
+					      <input   class="number" type="number" maxlength="8" id="buyNum" title="请输入购买数量">
+					      <button  class="btn btn-success btn-xs glyphicon glyphicon-minus-sign"></button>
+				   </div>
+				</div>	
+				<div class="bus-dis">  
+		           <!-- 图片和描述 -->
+				   <div class="bus-dis-des">
+				   		<img src="../pic/coco-cola.jpg" alt="">
+				   		<span>
+				   			¥<span id="price">199.00</span>(<span id="unit">箱</span>)
+				   		</span><br>
+				   		<span id="goodsDes">可口可乐300ml瓶装饮料</span>
+				   </div>
+				   <!-- 订货数量 -->
+				   <div class="buyNum">
+					      <button  class="btn btn-success btn-xs glyphicon glyphicon-plus-sign"></button>
+					      <input   class="number" type="number" maxlength="8" id="buyNum" title="请输入购买数量">
+					      <button  class="btn btn-success btn-xs glyphicon glyphicon-minus-sign"></button>
+				   </div>
+				</div>	
+				<div class="bus-dis">  
+		           <!-- 图片和描述 -->
+				   <div class="bus-dis-des">
+				   		<img src="../pic/coco-cola.jpg" alt="">
+				   		<span>
+				   			¥<span id="price">199.00</span>(<span id="unit">箱</span>)
+				   		</span><br>
+				   		<span id="goodsDes">可口可乐300ml瓶装饮料</span>
+				   </div>
+				   <!-- 订货数量 -->
+				   <div class="buyNum">
+					      <button  class="btn btn-success btn-xs glyphicon glyphicon-plus-sign"></button>
+					      <input   class="number" type="number" maxlength="8" id="buyNum" title="请输入购买数量">
+					      <button  class="btn btn-success btn-xs glyphicon glyphicon-minus-sign"></button>
+				   </div>
+				</div>	
+
+				
+		   </div>
+		   <!-- 分页&翻页 -->
+		   <div class="page clearfix">
+		        <p>共<span id="pageCount">19990</span>条记录</p>
+		   	    <div id="MainContent_AspNetPager_Msg" class="paginator">
+		   	    	 <a disabled='disabled' style='margin-right:5px;'>← 上一页</a><span class='cpb' style='margin-right:5px;'>1</span><a disabled='disabled' style='margin-right:5px;'>下一页 →</a>
+                </div>
+                <div class="hidden" id="CurrentPageSize">1</div>
+		   </div>
+	   </div>   
+	</div>
+	<div class="footer">
+		<div>
+		    <h2>购物指南</h2>
+			<ul>
+				<li><a href="" target="_blank">免费注册</a></li>
+				<li><a href="" target="_blank">开通支付宝</a></li>
+				<li><a href="" target="_blank">支付宝充值</a></li>
+			</ul>
+		</div>
+		<div>
+		    <h2>商城保障</h2>
+			<ul>
+				<li><a href="" target="_blank">发票保障</a></li>
+				<li><a href="" target="_blank">售后规则</a></li>
+				<li><a href="" target="_blank">缺货赔付</a></li>
+			</ul>
+		</div>
+		<div>
+		    <h2>支付方式</h2>
+			<ul>
+				<li><a href="" target="_blank">快捷支付</a></li>
+				<li><a href="" target="_blank">信用卡</a></li>
+				<li><a href="" target="_blank">支付宝</a></li>
+				<li><a href="" target="_blank">微信</a></li>
+			</ul>
+		</div>
+		<div>
+		    <h2>商城服务</h2>
+			<ul>
+				<li><a href="" target="_blank">商家加盟</a></li>
+				<li><a href="" target="_blank">物流服务</a></li>
+				<li><a href="" target="_blank">在线客服</a></li>
+				<li><a href="" target="_blank">售后客服</a></li>
+			</ul>
+		</div>
+	</div>
+<script src="../js/nav-dis.js"></script>
+<script src="../js/nav-select-result.js"></script>
+<script src="../js/global.js"></script>	
+</body>
+</html>
